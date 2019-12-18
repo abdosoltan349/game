@@ -49,8 +49,10 @@ function removeSpaces(text) {
 }
 
 function isEpmpty(text) {
+  console.log(text.value)
   if (text.value == "" || text.value == null)
     return true;
+
   return false;
 }
 
@@ -164,7 +166,7 @@ confimation.addEventListener("focusout", () => {
 
 
 function checkLogin() {
-  
+  console.log(isEpmpty(loginemail) + " hreeee " + isEpmpty(passsemail))
   if (isEpmpty(loginemail) &&  isEpmpty(passsemail)) {
     logdis.innerHTML = "Empty";
     loginPssDis.innerHTML = "Empty";
@@ -177,7 +179,7 @@ function checkLogin() {
     loginPssDis.innerHTML = "Empty"
     return false
   }
-  else{
+  else if (isEpmpty(loginemail)) {
     logdis.innerHTML = "Empty";
     logdis.style.borderBottom = "#FC8C1B solid 2px"
     return false
