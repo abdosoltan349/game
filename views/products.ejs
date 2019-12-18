@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title></title>
+
 
 </head>
 
@@ -10,33 +10,16 @@
 
     <%- include('parts/header'); %>
 
-    <%for(let product of products){%>
+        <%for(let product of productes){%>
 
-        <h1>
-            <%=product.price%>
-        </h1>
-        <h1>
-            <%=product.DESCRIPTION%>
-        </h1>
+            <h1>
+                <%=product.price%>
+            </h1>
+            <h1>
+                <%=product.DESCRIPTION%>
+            </h1>
 
-<<<<<<< HEAD
-        <% } %>
-=======
-        <% }; %>
-
-            <!--div class="container">
-            <div class="row">
-                <%for(let product of products%>
-                    <div class="col col-12 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card bigbox row text forbeing3d" style="max-width:20rem;">
-                            <!img class="card-img-top small3d" src=<%=product.path%> alt="Card image cap">
-                            <div class="card-body row small3d" style="display: inline-block">
-                                <h5 class="card-title small3dfortext">
-                                    <%=product.name%>
-                                </h5>
-                                <p class="card-text small3dfortext">
-                                    <%=product.DESCRIPTION%>
->>>>>>> 611647ada1913462f266f170c2ca5767e6feb4da
+            <% } %>
 
 </body>
 

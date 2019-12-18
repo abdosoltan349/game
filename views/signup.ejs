@@ -31,13 +31,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6 col-sm-7 col-xs-12" id="con">
                     <div id="motion" class="right"></div>
-<<<<<<< HEAD
                     <form action="/signin" id="loginForm" method="POST">
                         <div><button id="toSignup" style="border-radius: 20px; padding-left: 6px ;" type="button" class="btn btn-outline-dark"><i class="fas fa-chevron-left"></i> Sign up</button></div>
-=======
-                    <form action="signin" id="loginForm" onsubmit="event.preventDefault(); checkLogin()" method="POST">
-                        <div><button id="toSignup" name="ahmed" style="border-radius: 20px; padding-left: 6px ;" type="button" class="btn btn-outline-dark"><i class="fas fa-chevron-left"></i> Sign up</button></div>
->>>>>>> 611647ada1913462f266f170c2ca5767e6feb4da
                         <div class="follow_us" style="margin: 20px 0px 80px 0px ;">
                             <button type="button" class="btn btn-outline-dark">  <i class="fab fa-facebook"></i></button>
                             <button type="button" class="btn btn-outline-dark">  <i class="fab fa-google"></i></button>
@@ -64,7 +59,7 @@
 
                     </form>
 
-                    <form action="/signup" method="POST" onsubmit="isValid()" id="signupForm" style="background: white;">
+                    <form action="/signup" method="POST" onsubmit="event.preventDefault(); isValid()" id="signupForm" style="background: white;">
                         <div style="text-align: right;"><button id="toLogin" style="border-radius: 20px; padding-right: 6px ;" type="button" class="btn btn-outline-dark"> Login <i class="fas fa-chevron-right"></i></button></div>
                         <div class="follow_us" style="margin-top: 20px ;">
                             <button type="button" class="btn btn-outline-dark">  <i class="fab fa-facebook"></i></button>
@@ -98,7 +93,6 @@
 
             </div>
         </div>
-<<<<<<< HEAD
         <%- include('parts/chat')%>
             <!--script src="../assets/javascripts/validation.js"></script-->
             <script>
@@ -111,20 +105,6 @@
                 toSignup.addEventListener("click", () => {
                     motion.classList.remove("right")
                     motion.classList.add("left")
-=======
-		<%- include('parts/chat')%>
-        <script src="../assets/javascripts/validation.js"></script>
-        <script>
-            var toLogin = document.getElementById("toLogin")
-            var toSignup = document.getElementById("toSignup")
-            var loginForm = document.getElementById("loginForm")
-            var signupForm = document.getElementById("signupForm")
-            var motion = document.getElementById("motion")
-            
-            toSignup.addEventListener("click", () => {
-                motion.classList.remove("right")
-                motion.classList.add("left")
->>>>>>> 611647ada1913462f266f170c2ca5767e6feb4da
 
                     setTimeout(() => {
                         loginForm.style.display = "none"
