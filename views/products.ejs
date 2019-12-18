@@ -7,7 +7,22 @@
 </head>
 
 <body>
+
     <%- include('parts/header'); %>
+
+    <%for(let product of products){%>
+        <h1>
+            <%=products.name%>
+        </h1>
+        <h1>
+            <%=products.price%>
+        </h1>
+        <h1>
+            <%=products.DESCRIPTION%>
+        </h1>
+
+        <% }; %>
+
             <!--div class="container">
             <div class="row">
                 <%for(let product of products%>
