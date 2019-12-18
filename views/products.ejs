@@ -8,40 +8,16 @@
 
 <body>
     <%for(let product of products){%>
+
         <h1>
-            <%=products.name%>
+            <%=product.price%>
         </h1>
         <h1>
-            <%=products.price%>
-        </h1>
-        <h1>
-            <%=products.DESCRIPTION%>
+            <%=product.DESCRIPTION%>
         </h1>
 
-        <% }; %>
-            <!--div class="container">
-            <div class="row">
-                <%for(let product of products%>
-                    <div class="col col-12 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card bigbox row text forbeing3d" style="max-width:20rem;">
-                            <!img class="card-img-top small3d" src=<%=product.path%> alt="Card image cap">
-                            <div class="card-body row small3d" style="display: inline-block">
-                                <h5 class="card-title small3dfortext">
-                                    <%=product.name%>
-                                </h5>
-                                <p class="card-text small3dfortext">
-                                    <%=product.DESCRIPTION%>
+        <% } %>
 
-                                </p>
-                                <hr style="background: white; clear: both;width: 90%;">
-                                <strong class="small3dfortext"><%=product.price%></strong>
-                                <a href="/product/<%-product.id%>" class="btn btn-primary small3d" style="display: inline-block; float: right;">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <% } %>
-            </div>
-        </div-->
 </body>
 
 </html>

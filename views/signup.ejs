@@ -13,8 +13,11 @@
     <title>Signup/signin</title>
     <link rel="stylesheet" href="../assets/css/layoutStyle.css">
     <link rel="stylesheet" href="../assets/css/signupStyle.css">
+
     <style>
-        .dis,#logdis,#loginPassDis {
+        .dis,
+        #logdis,
+        #loginPassDis {
             text-align: center;
         }
     </style>
@@ -23,12 +26,12 @@
 
 <body>
     <%- include("parts/header")%>
-	
+
         <div class="container-fluid" style="margin-top: 50px;">
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6 col-sm-7 col-xs-12" id="con">
                     <div id="motion" class="right"></div>
-                    <form action="signin" id="loginForm" onsubmit="event.preventDefault(); checkLogin()" method="POST">
+                    <form action="/signin" id="loginForm" method="POST">
                         <div><button id="toSignup" style="border-radius: 20px; padding-left: 6px ;" type="button" class="btn btn-outline-dark"><i class="fas fa-chevron-left"></i> Sign up</button></div>
                         <div class="follow_us" style="margin: 20px 0px 80px 0px ;">
                             <button type="button" class="btn btn-outline-dark">  <i class="fab fa-facebook"></i></button>
@@ -39,12 +42,12 @@
                             <label for="email">Email address:</label>
                             <input type="email" class="form-control " id="email" name="loginemail">
                             <div id="logdis"></div>
-                            
+
                         </div>
                         <div class="form-group">
                             <label for="pwd">Password:</label>
                             <input type="password" class="form-control " id="pwd" name="loginpassword">
-                            <div  id="loginPassDis"></div>
+                            <div id="loginPassDis"></div>
                         </div>
                         <div class="form-group form-check" id="cccc">
                             <label class="form-check-label">
@@ -52,7 +55,7 @@
                           </label>
 
                         </div>
-                        <div id="submitBtn" style="text-align: center;"><button type="submit" class="btn btn-primary" id="btlogin">Submit</button></div>
+                        <div id="submitBtn" style="text-align: center;" onclick="checkauth()"><button type="submit" class="btn btn-primary" id="btlogin">Submit</button></div>
 
                     </form>
 
@@ -90,35 +93,35 @@
 
             </div>
         </div>
-		<%- include('parts/chat')%>
-        <script src="../assets/javascripts/validation.js"></script>
-        <script>
-            var toLogin = document.getElementById("toLogin")
-            var toSignup = document.getElementById("toSignup")
-            var loginForm = document.getElementById("loginForm")
-            var signupForm = document.getElementById("signupForm")
-            var motion = document.getElementById("motion")
+        <%- include('parts/chat')%>
+            <!--script src="../assets/javascripts/validation.js"></script-->
+            <script>
+                var toLogin = document.getElementById("toLogin")
+                var toSignup = document.getElementById("toSignup")
+                var loginForm = document.getElementById("loginForm")
+                var signupForm = document.getElementById("signupForm")
+                var motion = document.getElementById("motion")
 
-            toSignup.addEventListener("click", () => {
-                motion.classList.remove("right")
-                motion.classList.add("left")
+                toSignup.addEventListener("click", () => {
+                    motion.classList.remove("right")
+                    motion.classList.add("left")
 
-                setTimeout(() => {
-                    loginForm.style.display = "none"
-                    signupForm.style.display = "list-item"
-                }, 400)
-            })
-            toLogin.addEventListener("click", () => {
-                motion.classList.remove("left")
-                motion.classList.add("right")
+                    setTimeout(() => {
+                        loginForm.style.display = "none"
+                        signupForm.style.display = "list-item"
+                    }, 400)
+                })
+                toLogin.addEventListener("click", () => {
+                    motion.classList.remove("left")
+                    motion.classList.add("right")
 
-                setTimeout(() => {
-                    loginForm.style.display = "list-item"
-                    signupForm.style.display = "none"
-                }, 400)
-                toSignup.classList.add("bt")
-            })
-        </script>
+                    setTimeout(() => {
+                        loginForm.style.display = "list-item"
+                        signupForm.style.display = "none"
+                    }, 400)
+                    toSignup.classList.add("bt")
+                })
+            </script>
 </body>
 
 </html>

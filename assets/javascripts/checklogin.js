@@ -10,11 +10,14 @@ var firebaseConfig = {
     measurementId: "G-623XPZVX8J"
 };
 firebase.initializeApp(firebaseConfig);
+function checkauth(){
+    
+
 firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
            document.getElementById('loginBtn').style.visibility = 'hidden';
         }
     })
-
+};
 
      
