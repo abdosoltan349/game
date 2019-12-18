@@ -7,7 +7,6 @@ exports.getallproducts = () => {
 
     ref.on("value", function(snapshot) {
         if (snapshot.val() !== undefined) {
-            console.log(snapshot.val());
             return snapshot.val();
         }
     }, function(error) {
