@@ -10,6 +10,7 @@ let passsemail = document.getElementById("pwd");
 let logdis = document.getElementById("logdis");
 let loginPssDis = document.getElementById("loginPassDis");
 let emailFeild = list[1];
+var signupForm =  document.getElementById("signupForm");
 
 
 
@@ -76,7 +77,7 @@ function cheackEmail() {
 }
 function checkPassword() {
   if (!isEpmpty(password)) {
-    if (containAlphabets(password.value) && containNmbers(password.value)) {
+    if (containAlphabets(password.value) && containNmbers(password.value) && (password.value.length >= 6)) {
       passDis.innerHTML = "Strong"
       passDis.style.borderBottom = "#54F26C solid 2px"
     } else {
@@ -87,6 +88,7 @@ function checkPassword() {
       passDis.innerHTML = "A space been removed"
       passDis.style.borderBottom = "#54F26C solid 2px"
     }
+     
   } else {
     passDis.innerHTML = "Empty"
     passDis.style.borderBottom = "#FC8C1B solid 2px";
@@ -129,6 +131,7 @@ for (let i = 0; i < list.length; i++) {
       message.style.borderBottom = "#E93535 solid 2px";
       //disableForms(order+1);
     }
+   
     else {
       message.innerHTML = "All Good!";
       message.style.borderBottom = "#54F26C solid 2px";
